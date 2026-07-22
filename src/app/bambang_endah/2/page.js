@@ -1,0 +1,19 @@
+import ClientPage from './client';
+
+export const metadata = {
+  title: 'Bambang & Endah Wedding',
+  description: 'Minggu, 14 Mei 2023',
+  openGraph: {
+    title: 'Bambang & Endah Wedding',
+    description: 'Minggu, 14 Mei 2023',
+    type: 'website',
+    url: 'https://menghitunghari.vercel.app/bambang_endah/2',
+  },
+  alternates: {
+    canonical: 'https://menghitunghari.vercel.app/bambang_endah/2',
+  },
+};
+
+export default function Page() {
+  return <ClientPage />;
+}

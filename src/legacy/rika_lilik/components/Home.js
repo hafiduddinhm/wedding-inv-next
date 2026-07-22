@@ -1,0 +1,161 @@
+import React, {useRef, forwardRef, useState, useEffect} from 'react';
+import {Box, useTheme} from '@mui/material';
+import bg from '../assets/image/bgHome.png';
+import ornament1 from '../assets/image/home1.png';
+import ornament2 from '../assets/image/home2.png';
+import ornament3 from '../assets/image/home3.png';
+import ornament4 from '../assets/image/home4.png';
+import brides from '../assets/image/brides.png';
+import aos from 'aos';
+import 'aos/dist/aos.css';
+
+const Home = forwardRef((props, ref) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowHeight, setWindowHeight] = useState(
+    window.innerHeight,
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      setWindowHeight(window.innerHeight);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    aos.init();
+  }, []);
+
+  const theme = useTheme();
+
+  const boxStyles = {};
+
+  const styles = {
+    section: {
+      backgroundColor: theme.palette.light.main,
+      backgroundImage: `url(${bg})`,
+      backgroundSize: '100% 100%',
+
+      overflow: 'hidden',
+    },
+    box: {
+      position: 'relative',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      paddingBottom: '25vh',
+      overflow: 'hidden',
+    },
+    header: {
+      color: theme.palette.primary.main,
+      fontSize: `${140 + windowWidth * 0.07}%`,
+      justifySelf: 'center',
+      textAlign: 'center',
+    },
+    ornament: {
+      width: `${50 - windowWidth * 0.025}%`,
+    },
+    ornament1: {
+      left: 0,
+      top: 0,
+      position: 'absolute',
+      // width: '75%',
+      width:
+        windowWidth > windowHeight
+          ? `${65 - windowHeight * 0.01}vh`
+          : `${75 - windowWidth * 0.01}%`,
+    },
+    ornament2: {
+      right: 0,
+      top: 0,
+      position: 'absolute',
+      // width: '60%',
+      width:
+        windowWidth > windowHeight
+          ? `${50 - windowHeight * 0.01}vh`
+          : `${60 - windowWidth * 0.01}%`,
+    },
+    ornament3: {
+      right: 0,
+      bottom: '0vh',
+      // transform: 'translate(0, 100%)',
+      position: 'absolute',
+      // width: '75%',
+      width:
+        windowWidth > windowHeight
+          ? `${65 - windowHeight * 0.01}vh`
+          : `${60 - windowWidth * 0.01}%`,
+    },
+    ornament4: {
+      left: 0,
+      bottom: '0vh',
+      position: 'absolute',
+      // width: '92%',
+      width:
+        windowWidth > windowHeight
+          ? `${95 - windowHeight * 0.05}vh`
+          : `${80 - windowWidth * 0.05}%`,
+    },
+    brides: {
+      position: 'relative',
+      bottom: `${-17 + windowWidth * 0.01}vh`,
+      width: `${110 - windowWidth * 0.05}%`,
+    },
+    txt: {
+      color: theme.palette.primary.main,
+      textAlign: 'center',
+      zIndex: 3,
+      fontSize:
+        windowWidth > windowHeight
+          ? `${0 + windowHeight * 0.005}vh`
+          : `${20 + windowWidth * 0.25}%`,
+    },
+  };
+
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    if (ref) {
+      ref.current = sectionRef.current;
+    }
+  }, [ref]);
+
+  return (
+    <section ref={sectionRef} style={styles.section}>
+      <Box style={styles.box}>
+        <img src={ornament1} style={styles.ornament1} />
+        <img src={ornament2} style={styles.ornament2} />
+        <Box sx={{marginTop: '20vh'}}>
+          <p style={{...styles.txt}}>The Wedding of</p>
+          <h1
+            style={{
+              ...styles.txt,
+              fontSize: `${180 + windowWidth * 0.1}%`,
+            }}
+            className="font-serif"
+          >
+            Rika & Lilik
+          </h1>
+          <h1
+            style={{
+              ...styles.txt,
+              fontSize: `${130 + windowWidth * 0.1}%`,
+            }}
+            className="font-serif"
+          >
+            13 Mei 2023
+          </h1>
+        </Box>
+        <img src={brides} style={styles.brides} />
+        <img src={ornament3} style={styles.ornament3} />
+        <img src={ornament4} style={styles.ornament4} />
+      </Box>
+    </section>
+  );
+});
+
+export default Home;
