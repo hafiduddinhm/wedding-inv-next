@@ -9,11 +9,11 @@ export const metadata = {
     title: 'Putri & Ipan Wedding',
     description: 'Minggu, 29 Oktober 2023',
     type: 'website',
-    url: 'https://menghitunghari.vercel.app/putri_ipan',
+    url: 'https://menghitunghari2.vercel.app/putri_ipan',
     images: [coupleImage],
   },
   alternates: {
-    canonical: 'https://menghitunghari.vercel.app/putri_ipan',
+    canonical: 'https://menghitunghari2.vercel.app/putri_ipan',
   },
 };
 

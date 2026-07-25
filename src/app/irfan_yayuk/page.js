@@ -9,11 +9,11 @@ export const metadata = {
     title: 'Irfan & Yayuk Wedding',
     description: 'Minggu, 7 Mei 2023',
     type: 'website',
-    url: 'https://menghitunghari.vercel.app/irfan_yayuk',
+    url: 'https://menghitunghari2.vercel.app/irfan_yayuk',
     images: [coupleImage],
   },
   alternates: {
-    canonical: 'https://menghitunghari.vercel.app/irfan_yayuk',
+    canonical: 'https://menghitunghari2.vercel.app/irfan_yayuk',
   },
 };
 

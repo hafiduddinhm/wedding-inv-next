@@ -9,11 +9,11 @@ export const metadata = {
     title: 'Hendra & Elma Wedding',
     description: 'Senin, 15 Mei 2023',
     type: 'website',
-    url: 'https://menghitunghari.vercel.app/hendra_elma',
+    url: 'https://menghitunghari2.vercel.app/hendra_elma',
     images: [coupleImage],
   },
   alternates: {
-    canonical: 'https://menghitunghari.vercel.app/hendra_elma',
+    canonical: 'https://menghitunghari2.vercel.app/hendra_elma',
   },
 };
 

@@ -151,12 +151,12 @@ const PutriIpan = () => {
           <meta property="og:image" content={ogImageUrl} />
           <meta
             property="og:url"
-            content="https://menghitunghari.vercel.app/"
+            content="https://menghitunghari2.vercel.app/"
           />
           <meta property="og:type" content="website" />
           <link
             rel="canonical"
-            href="https://menghitunghari.vercel.app/putri_ipan"
+            href="https://menghitunghari2.vercel.app/putri_ipan"
           />
         </Helmet>
         <OpeningModal onClosed={handlePlayMusic} />

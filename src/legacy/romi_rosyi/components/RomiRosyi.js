@@ -148,12 +148,12 @@ const RomiRosyi = () => {
           <meta property="og:image" content={ogImageUrl} />
           <meta
             property="og:url"
-            content="https://menghitunghari.vercel.app/"
+            content="https://menghitunghari2.vercel.app/"
           />
           <meta property="og:type" content="website" />
           <link
             rel="canonical"
-            href="https://menghitunghari.vercel.app/romi_rosyi"
+            href="https://menghitunghari2.vercel.app/romi_rosyi"
           />
         </Helmet>
         <OpeningModal onClosed={handlePlayMusic} />

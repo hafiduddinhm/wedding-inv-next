@@ -61,7 +61,7 @@ const Acara = forwardRef((props, sectionRef) => {
 
   const receptionDate = '2024-05-02T10:00:00';
   const linkCalendar =
-    'https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Ajay+%26+Uwin&location=https%3A%2F%2Fgoo.gl%2Fmaps%2FSroySHvz8ViRGf6S8&dates=20230716T090000+0700/20230716T150000+0700&details=https%3A%2F%2Fmenghitunghari.vercel.app%2Fajay%5Fuwin%2F1';
+    'https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Ajay+%26+Uwin&location=https%3A%2F%2Fgoo.gl%2Fmaps%2FSroySHvz8ViRGf6S8&dates=20230716T090000+0700/20230716T150000+0700&details=https%3A%2F%2Fmenghitunghari2.vercel.app%2Fajay%5Fuwin%2F1';
 
   const [countdown, setCountdown] = useState({
     days: 0,

@@ -143,12 +143,12 @@ const RisaAldi = () => {
           />
           <meta
             property="og:url"
-            content="https://menghitunghari.vercel.app/"
+            content="https://menghitunghari2.vercel.app/"
           />
           <meta property="og:type" content="website" />
           <link
             rel="canonical"
-            href="https://menghitunghari.vercel.app/risa_aldi"
+            href="https://menghitunghari2.vercel.app/risa_aldi"
           />
         </Helmet>
         <OpeningModal onClosed={handlePlayMusic} />

@@ -9,11 +9,11 @@ export const metadata = {
     title: 'Anita & Husni Wedding',
     description: 'Minggu, 5 November 2023',
     type: 'website',
-    url: 'https://menghitunghari.vercel.app/anita_husni',
+    url: 'https://menghitunghari2.vercel.app/anita_husni',
     images: [coupleImage],
   },
   alternates: {
-    canonical: 'https://menghitunghari.vercel.app/anita_husni',
+    canonical: 'https://menghitunghari2.vercel.app/anita_husni',
   },
 };
 

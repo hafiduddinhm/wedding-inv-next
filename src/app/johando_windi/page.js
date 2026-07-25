@@ -9,11 +9,11 @@ export const metadata = {
     title: 'Johando & Windi Wedding',
     description: 'Kamis, 2 Mei 2023',
     type: 'website',
-    url: 'https://menghitunghari.vercel.app/johando_windi',
+    url: 'https://menghitunghari2.vercel.app/johando_windi',
     images: [coupleImage],
   },
   alternates: {
-    canonical: 'https://menghitunghari.vercel.app/johando_windi',
+    canonical: 'https://menghitunghari2.vercel.app/johando_windi',
   },
 };
 

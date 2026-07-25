@@ -25,7 +25,7 @@ const Home = forwardRef((props, ref) => {
   const mempelai2 = 'Anwar';
   const hariTanggal = 'Minggu, 10 Desember 2045';
   const linkCalendar =
-    'https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Fitri+%26+Anwar&location=https%3A%2F%2Fmaps.app.goo.gl%2FioyLLnhz95Nap7Nw8&dates=20231029T100000+0700/20231029T150000+0700&details=https%3A%2F%2Fmenghitunghari.vercel.app%2Fivy5';
+    'https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Fitri+%26+Anwar&location=https%3A%2F%2Fmaps.app.goo.gl%2FioyLLnhz95Nap7Nw8&dates=20231029T100000+0700/20231029T150000+0700&details=https%3A%2F%2Fmenghitunghari2.vercel.app%2Fivy5';
   const [countdown, setCountdown] = useState({
     days: 0,
     hours: 0,

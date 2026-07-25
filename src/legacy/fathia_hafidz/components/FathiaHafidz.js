@@ -161,12 +161,12 @@ const FathiaHafidz = () => {
           <meta property="og:image" content={ogImageUrl} />
           <meta
             property="og:url"
-            content="https://menghitunghari.vercel.app/"
+            content="https://menghitunghari2.vercel.app/"
           />
           <meta property="og:type" content="website" />
           <link
             rel="canonical"
-            href="https://menghitunghari.vercel.app/fathia_hafidz"
+            href="https://menghitunghari2.vercel.app/fathia_hafidz"
           />
         </Helmet>
         <OpeningModal onClosed={handlePlayMusic} />

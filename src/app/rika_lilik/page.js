@@ -9,11 +9,11 @@ export const metadata = {
     title: 'Rika & Lilik Wedding',
     description: 'Sabtu, 13 Mei 2023',
     type: 'website',
-    url: 'https://menghitunghari.vercel.app/rika_lilik',
+    url: 'https://menghitunghari2.vercel.app/rika_lilik',
     images: [coupleImage],
   },
   alternates: {
-    canonical: 'https://menghitunghari.vercel.app/rika_lilik',
+    canonical: 'https://menghitunghari2.vercel.app/rika_lilik',
   },
 };
 

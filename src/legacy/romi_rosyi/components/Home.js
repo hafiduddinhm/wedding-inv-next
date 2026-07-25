@@ -25,7 +25,7 @@ const Home = forwardRef((props, ref) => {
   const mempelai2 = 'Rosyi';
   const hariTanggal = 'Sabtu, 21 Oktober 2023';
   const linkCalendar =
-    'https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Oci+%26+Omi&location=https%3A%2F%2Fmaps.app.goo.gl%2F5a27GrQJCxSkEqW89&dates=20231021T100000+0700/20231021T160000+0700&details=https%3A%2F%2Fmenghitunghari.vercel.app%2Fomi_oci';
+    'https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Oci+%26+Omi&location=https%3A%2F%2Fmaps.app.goo.gl%2F5a27GrQJCxSkEqW89&dates=20231021T100000+0700/20231021T160000+0700&details=https%3A%2F%2Fmenghitunghari2.vercel.app%2Fomi_oci';
   const [countdown, setCountdown] = useState({
     days: 0,
     hours: 0,

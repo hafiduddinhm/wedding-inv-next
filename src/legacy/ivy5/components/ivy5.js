@@ -151,12 +151,12 @@ const Ivy5 = () => {
           <meta property="og:image" content={ogImageUrl} />
           <meta
             property="og:url"
-            content="https://menghitunghari.vercel.app/"
+            content="https://menghitunghari2.vercel.app/"
           />
           <meta property="og:type" content="website" />
           <link
             rel="canonical"
-            href="https://menghitunghari.vercel.app/fitri_anwar"
+            href="https://menghitunghari2.vercel.app/fitri_anwar"
           />
         </Helmet>
         <OpeningModal onClosed={handlePlayMusic} />

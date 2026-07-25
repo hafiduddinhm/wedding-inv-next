@@ -71,12 +71,12 @@ const IrfanYayuk = () => {
           <meta property="og:image" content={ogImageUrl} />
           <meta
             property="og:url"
-            content="https://menghitunghari.vercel.app/"
+            content="https://menghitunghari2.vercel.app/"
           />
           <meta property="og:type" content="website" />
           <link
             rel="canonical"
-            href="https://menghitunghari.vercel.app/irfan_yayuk"
+            href="https://menghitunghari2.vercel.app/irfan_yayuk"
           />
         </Helmet>
         <OpeningModal />

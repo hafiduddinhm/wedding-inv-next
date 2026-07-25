@@ -21,7 +21,7 @@ const Acara = forwardRef((props, sectionRef) => {
   const linkLokasi =
     'https://www.google.com/maps/@-7.1095518,111.8174271,3a,74.999992y,279.965576h,83.397614t/data=!3m4!1e1!3m2!1sVSYsZerKDMEwD2D7k87HyA!2e0?lucs=47067412&g_st=iw';
   const linkCalendar =
-    'https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Bambang+%26+Endah&location=https%3A%2F%2Fgoo.gl%2Fmaps%2FQVAcHAi2Pecdaw3a6&dates=20230514T100000+0700/20230514T150000+0700&details=https%3A%2F%2Fmenghitunghari.vercel.app%2Fbambang%5Fendah%2F1';
+    'https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Bambang+%26+Endah&location=https%3A%2F%2Fgoo.gl%2Fmaps%2FQVAcHAi2Pecdaw3a6&dates=20230514T100000+0700/20230514T150000+0700&details=https%3A%2F%2Fmenghitunghari2.vercel.app%2Fbambang%5Fendah%2F1';
   const receptionDate = '2023-05-14T10:00:00';
 
   // const location = {

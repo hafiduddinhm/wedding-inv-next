@@ -9,11 +9,11 @@ export const metadata = {
     title: 'Romi & Rosyi Wedding',
     description: 'Sabtu, 21 Oktober 2023',
     type: 'website',
-    url: 'https://menghitunghari.vercel.app/romi_rosyi',
+    url: 'https://menghitunghari2.vercel.app/romi_rosyi',
     images: [coupleImage],
   },
   alternates: {
-    canonical: 'https://menghitunghari.vercel.app/romi_rosyi',
+    canonical: 'https://menghitunghari2.vercel.app/romi_rosyi',
   },
 };
 

@@ -9,7 +9,7 @@ import {motion, AnimatePresence} from 'framer-motion';
 const Home = forwardRef((props, ref) => {
   const receptionDate = '2023-10-29T09:00:00';
   const linkCalendar =
-    'https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Putri+%26+Ipan&location=https%3A%2F%2Fgoo.gl%2Fmaps%2FHdrSfmGTmVsF2efQ7&dates=20231029T100000+0700/20231029T150000+0700&details=https%3A%2F%2Fmenghitunghari.vercel.app%2Fputri%5Fipan';
+    'https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Putri+%26+Ipan&location=https%3A%2F%2Fgoo.gl%2Fmaps%2FHdrSfmGTmVsF2efQ7&dates=20231029T100000+0700/20231029T150000+0700&details=https%3A%2F%2Fmenghitunghari2.vercel.app%2Fputri%5Fipan';
   const [countdown, setCountdown] = useState({
     days: 0,
     hours: 0,

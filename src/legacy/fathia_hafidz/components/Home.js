@@ -10,7 +10,7 @@ import moment from 'moment/moment';
 const Home = forwardRef((props, ref) => {
   const receptionDate = '2024-12-12T14:00:00';
   // const linkCalendar =
-  //   'https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Fathia+%26+Hafidz&location=https%3A%2F%2Fgoo.gl%2Fmaps%2FHdrSfmGTmVsF2efQ7&dates=20231029T100000+0700/20231029T150000+0700&details=https%3A%2F%2Fmenghitunghari.vercel.app%2Ffathia%5Fhafidz';
+  //   'https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Fathia+%26+Hafidz&location=https%3A%2F%2Fgoo.gl%2Fmaps%2FHdrSfmGTmVsF2efQ7&dates=20231029T100000+0700/20231029T150000+0700&details=https%3A%2F%2Fmenghitunghari2.vercel.app%2Ffathia%5Fhafidz';
   const [countdown, setCountdown] = useState({
     days: 0,
     hours: 0,

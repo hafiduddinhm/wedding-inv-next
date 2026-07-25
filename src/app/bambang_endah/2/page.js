@@ -7,10 +7,10 @@ export const metadata = {
     title: 'Bambang & Endah Wedding',
     description: 'Minggu, 14 Mei 2023',
     type: 'website',
-    url: 'https://menghitunghari.vercel.app/bambang_endah/2',
+    url: 'https://menghitunghari2.vercel.app/bambang_endah/2',
   },
   alternates: {
-    canonical: 'https://menghitunghari.vercel.app/bambang_endah/2',
+    canonical: 'https://menghitunghari2.vercel.app/bambang_endah/2',
   },
 };
 

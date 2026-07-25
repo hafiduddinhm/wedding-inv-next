@@ -9,11 +9,11 @@ export const metadata = {
     title: 'Fitri & Anwar Wedding',
     description: 'Minggu, 10 Desember 2045',
     type: 'website',
-    url: 'https://menghitunghari.vercel.app/ivy5',
+    url: 'https://menghitunghari2.vercel.app/ivy5',
     images: [coupleImage],
   },
   alternates: {
-    canonical: 'https://menghitunghari.vercel.app/ivy5',
+    canonical: 'https://menghitunghari2.vercel.app/ivy5',
   },
 };
 

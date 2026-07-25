@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Analytics} from '@vercel/analytics/react';
 
 export const metadata = {
-  metadataBase: new URL('https://menghitunghari.vercel.app'),
+  metadataBase: new URL('https://menghitunghari2.vercel.app'),
   title: 'Menghitung Hari Invitation',
   description:
     'UNDANGAN DIGITAL Berbagi Momen Spesial dengan Mudah, Murah dan Cepat',

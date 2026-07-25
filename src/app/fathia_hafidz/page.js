@@ -16,11 +16,11 @@ export const metadata = {
     title: 'Fathia & Hafidz Wedding',
     description,
     type: 'website',
-    url: 'https://menghitunghari.vercel.app/fathia_hafidz',
+    url: 'https://menghitunghari2.vercel.app/fathia_hafidz',
     images: [coupleImage],
   },
   alternates: {
-    canonical: 'https://menghitunghari.vercel.app/fathia_hafidz',
+    canonical: 'https://menghitunghari2.vercel.app/fathia_hafidz',
   },
 };
 
