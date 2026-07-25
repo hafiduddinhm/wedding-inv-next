@@ -55,13 +55,13 @@ const ImageCarouselWrapper = styled(Box)`
 `;
 
 const imageToShow = [
-  '/media/irfan_yayuk/1.jpg',
-  '/media/irfan_yayuk/2.jpg',
-  '/media/irfan_yayuk/3.jpg',
-  '/media/irfan_yayuk/4.jpg',
-  '/media/irfan_yayuk/5.jpg',
-  '/media/irfan_yayuk/6.jpg',
-  '/media/irfan_yayuk/7.jpg',
+  '/media/irfan_yayuk/1.webp',
+  '/media/irfan_yayuk/2.webp',
+  '/media/irfan_yayuk/3.webp',
+  '/media/irfan_yayuk/4.webp',
+  '/media/irfan_yayuk/5.webp',
+  '/media/irfan_yayuk/6.webp',
+  '/media/irfan_yayuk/7.webp',
 ];
 
 const Gallery = forwardRef((props, sectionRef) => {

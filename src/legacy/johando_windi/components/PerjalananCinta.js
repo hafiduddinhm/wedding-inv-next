@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Grid, Box, useTheme, useMediaQuery} from '@mui/material';
 import {Favorite} from '@mui/icons-material';
 import ornament1 from '../assets/image/ornamen.png';
-import storyImg from '../assets/image/storyImg.jpg';
+import storyImg from '../assets/image/storyImg.webp';
 
 const PerjalananCerita = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

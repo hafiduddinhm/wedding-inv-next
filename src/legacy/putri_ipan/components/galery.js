@@ -59,20 +59,20 @@ const ImageCarouselWrapper = styled(Box)`
 `;
 
 const imageToShow = [
-  '/media/putri_ipan/1.jpg',
-  '/media/putri_ipan/2.jpg',
-  '/media/putri_ipan/3.jpg',
-  '/media/putri_ipan/4.jpg',
-  '/media/putri_ipan/5.jpg',
-  '/media/putri_ipan/6.jpg',
+  '/media/putri_ipan/1.webp',
+  '/media/putri_ipan/2.webp',
+  '/media/putri_ipan/3.webp',
+  '/media/putri_ipan/4.webp',
+  '/media/putri_ipan/5.webp',
+  '/media/putri_ipan/6.webp',
 ];
 const placeholder = [
-  '/media/putri_ipan/p1.jpg',
-  '/media/putri_ipan/p2.jpg',
-  '/media/putri_ipan/p3.jpg',
-  '/media/putri_ipan/p4.jpg',
-  '/media/putri_ipan/p5.jpg',
-  '/media/putri_ipan/p6.jpg',
+  '/media/putri_ipan/p1.webp',
+  '/media/putri_ipan/p2.webp',
+  '/media/putri_ipan/p3.webp',
+  '/media/putri_ipan/p4.webp',
+  '/media/putri_ipan/p5.webp',
+  '/media/putri_ipan/p6.webp',
 ];
 
 const Gallery = forwardRef((props, sectionRef) => {

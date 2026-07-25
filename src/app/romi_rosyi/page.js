@@ -1,4 +1,4 @@
-import coupleImage from '@/legacy/romi_rosyi/assets/image/home.jpg';
+import coupleImage from '@/legacy/romi_rosyi/assets/image/home.webp';
 
 import ClientPage from './client';
 

@@ -10,7 +10,7 @@ const nextConfig = {
     // code). This rule replaces it with a plain webpack asset/resource loader,
     // matching how CRA resolved these same imports to URL strings.
     config.module.rules.push({
-      test: /\.(png|jpe?g|gif)$/i,
+      test: /\.(png|jpe?g|gif|webp)$/i,
       type: 'asset/resource',
     });
     // SVGs use CRA's dual-export scheme: default import is a URL string

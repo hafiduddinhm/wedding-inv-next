@@ -17,7 +17,7 @@ import Closing from './Closing';
 import Gallery from './galery';
 import AmplopDigital from './AmplopDigital';
 import PerjalananCerita from './PerjalananCinta';
-import coupleImage from '../assets/image/home.png';
+import coupleImage from '../assets/image/home.webp';
 import {Alert, AlertTitle, Snackbar, Slide} from '@mui/material';
 
 const Ivy5Style = styled.div`

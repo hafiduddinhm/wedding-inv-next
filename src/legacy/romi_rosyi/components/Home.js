@@ -2,7 +2,7 @@ import React, {useRef, forwardRef, useState, useEffect} from 'react';
 import {Box, useTheme, Button, Typography} from '@mui/material';
 import styled from 'styled-components';
 import backgroundImage from '../assets/image/bgHome.png';
-import brides from '../assets/image/home.jpg';
+import brides from '../assets/image/home.webp';
 import frame from '../assets/image/FRAME.png';
 import mask from '../assets/image/MASK.svg';
 import aos from 'aos';

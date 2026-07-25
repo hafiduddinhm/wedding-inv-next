@@ -6,7 +6,7 @@ import {MailOutlined} from '@mui/icons-material';
 import {motion} from 'framer-motion';
 
 import PlayAudio from './PlayAudio';
-import bg from '../assets/image/bghome.jpg';
+import bg from '../assets/image/bghome.webp';
 
 const OpeningModal = () => {
   const audio = PlayAudio();

@@ -59,18 +59,18 @@ const ImageCarouselWrapper = styled(Box)`
 `;
 
 const imageToShow = [
-  '/media/demo/1.jpg',
-  '/media/demo/2.jpg',
-  '/media/demo/3.jpg',
-  '/media/demo/4.jpg',
-  '/media/demo/5.jpg',
+  '/media/demo/1.webp',
+  '/media/demo/2.webp',
+  '/media/demo/3.webp',
+  '/media/demo/4.webp',
+  '/media/demo/5.webp',
 ];
 const placeholder = [
-  '/media/demo/p1.jpg',
-  '/media/demo/p2.jpg',
-  '/media/demo/p3.jpg',
-  '/media/demo/p4.jpg',
-  '/media/demo/p5.jpg',
+  '/media/demo/p1.webp',
+  '/media/demo/p2.webp',
+  '/media/demo/p3.webp',
+  '/media/demo/p4.webp',
+  '/media/demo/p5.webp',
 ];
 
 const Gallery = forwardRef((props, sectionRef) => {

@@ -62,16 +62,16 @@ const ImageCarouselWrapper = styled(Box)`
 `;
 
 const imageToShow = [
-  '/media/rika_lilik/1.JPG',
-  '/media/rika_lilik/2.JPG',
-  '/media/rika_lilik/3.JPG',
-  '/media/rika_lilik/4.JPG',
-  '/media/rika_lilik/5.JPG',
-  '/media/rika_lilik/6.JPG',
-  '/media/rika_lilik/7.JPG',
-  '/media/rika_lilik/8.JPG',
-  '/media/rika_lilik/9.JPG',
-  '/media/rika_lilik/10.JPG',
+  '/media/rika_lilik/1.webp',
+  '/media/rika_lilik/2.webp',
+  '/media/rika_lilik/3.webp',
+  '/media/rika_lilik/4.webp',
+  '/media/rika_lilik/5.webp',
+  '/media/rika_lilik/6.webp',
+  '/media/rika_lilik/7.webp',
+  '/media/rika_lilik/8.webp',
+  '/media/rika_lilik/9.webp',
+  '/media/rika_lilik/10.webp',
 ];
 
 const Gallery = forwardRef((props, sectionRef) => {

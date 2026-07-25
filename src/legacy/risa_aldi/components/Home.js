@@ -7,7 +7,7 @@ import ornament3 from '../assets/image/home3.png';
 import ornament4 from '../assets/image/home4.png';
 import ornament5 from '../assets/image/home5.png';
 import ornament6 from '../assets/image/pengantin1.png';
-import brides from '../assets/image/brides.JPG';
+import brides from '../assets/image/brides.webp';
 import aos from 'aos';
 import 'aos/dist/aos.css';
 

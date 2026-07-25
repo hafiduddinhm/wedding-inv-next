@@ -1,5 +1,5 @@
 import React, {forwardRef, useState, useEffect} from 'react';
-import backgroundImage from '../assets/image/bgGaleri.jpg';
+import backgroundImage from '../assets/image/bgGaleri.webp';
 import ornament1 from '../assets/image/galeri1.png';
 import ornament2 from '../assets/image/galeri2.png';
 import bgOrnament from '../assets/image/bgOrnament.png';

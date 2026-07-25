@@ -62,20 +62,20 @@ const ImageCarouselWrapper = styled(Box)`
 `;
 
 const imageToShow = [
-  '/media/risa_aldi/1.JPG',
-  '/media/risa_aldi/2.JPG',
-  '/media/risa_aldi/3.JPG',
-  '/media/risa_aldi/4.JPG',
-  '/media/risa_aldi/5.JPG',
-  '/media/risa_aldi/5.JPG',
+  '/media/risa_aldi/1.webp',
+  '/media/risa_aldi/2.webp',
+  '/media/risa_aldi/3.webp',
+  '/media/risa_aldi/4.webp',
+  '/media/risa_aldi/5.webp',
+  '/media/risa_aldi/5.webp',
 ];
 const placeholder = [
-  '/media/risa_aldi/p1.JPG',
-  '/media/risa_aldi/p2.JPG',
-  '/media/risa_aldi/p3.JPG',
-  '/media/risa_aldi/p4.JPG',
-  '/media/risa_aldi/p5.JPG',
-  '/media/risa_aldi/p6.JPG',
+  '/media/risa_aldi/p1.webp',
+  '/media/risa_aldi/p2.webp',
+  '/media/risa_aldi/p3.webp',
+  '/media/risa_aldi/p4.webp',
+  '/media/risa_aldi/p5.webp',
+  '/media/risa_aldi/p6.webp',
 ];
 
 const Gallery = forwardRef((props, sectionRef) => {

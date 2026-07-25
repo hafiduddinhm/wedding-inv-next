@@ -58,16 +58,16 @@ const ImageCarouselWrapper = styled(Box)`
 `;
 
 const imageToShow = [
-  '/media/ajay_uwin/1.jpg',
-  '/media/ajay_uwin/2.jpg',
-  '/media/ajay_uwin/3.jpg',
-  '/media/ajay_uwin/4.jpg',
-  '/media/ajay_uwin/5.jpg',
-  '/media/ajay_uwin/6.jpg',
-  '/media/ajay_uwin/7.jpg',
-  '/media/ajay_uwin/8.jpg',
-  '/media/ajay_uwin/9.jpg',
-  '/media/ajay_uwin/10.jpg',
+  '/media/ajay_uwin/1.webp',
+  '/media/ajay_uwin/2.webp',
+  '/media/ajay_uwin/3.webp',
+  '/media/ajay_uwin/4.webp',
+  '/media/ajay_uwin/5.webp',
+  '/media/ajay_uwin/6.webp',
+  '/media/ajay_uwin/7.webp',
+  '/media/ajay_uwin/8.webp',
+  '/media/ajay_uwin/9.webp',
+  '/media/ajay_uwin/10.webp',
 ];
 
 const Gallery = forwardRef((props, sectionRef) => {

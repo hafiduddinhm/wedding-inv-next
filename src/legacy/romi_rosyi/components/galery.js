@@ -59,18 +59,18 @@ const ImageCarouselWrapper = styled(Box)`
 `;
 
 const imageToShow = [
-  '/media/oci_omi/1.jpg',
-  '/media/oci_omi/2.jpg',
-  '/media/oci_omi/3.jpg',
-  '/media/oci_omi/4.jpeg',
-  '/media/oci_omi/5.jpg',
+  '/media/oci_omi/1.webp',
+  '/media/oci_omi/2.webp',
+  '/media/oci_omi/3.webp',
+  '/media/oci_omi/4.webp',
+  '/media/oci_omi/5.webp',
 ];
 const placeholder = [
-  '/media/oci_omi/p1.jpg',
-  '/media/oci_omi/p2.jpg',
-  '/media/oci_omi/p3.jpg',
-  '/media/oci_omi/p4.jpeg',
-  '/media/oci_omi/p5.jpg',
+  '/media/oci_omi/p1.webp',
+  '/media/oci_omi/p2.webp',
+  '/media/oci_omi/p3.webp',
+  '/media/oci_omi/p4.webp',
+  '/media/oci_omi/p5.webp',
 ];
 
 const Gallery = forwardRef((props, sectionRef) => {

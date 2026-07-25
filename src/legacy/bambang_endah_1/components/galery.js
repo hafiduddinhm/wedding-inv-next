@@ -43,12 +43,12 @@ const GalleryWrapper = styled(Box)`
 `;
 
 const imageToShow = [
-  '/media/bambang_endah/1.jpg',
-  '/media/bambang_endah/2.jpg',
-  '/media/bambang_endah/3.jpg',
-  '/media/bambang_endah/4.jpg',
-  '/media/bambang_endah/5.jpg',
-  '/media/bambang_endah/6.jpg',
+  '/media/bambang_endah/1.webp',
+  '/media/bambang_endah/2.webp',
+  '/media/bambang_endah/3.webp',
+  '/media/bambang_endah/4.webp',
+  '/media/bambang_endah/5.webp',
+  '/media/bambang_endah/6.webp',
 ];
 
 const Gallery = forwardRef((props, sectionRef) => {

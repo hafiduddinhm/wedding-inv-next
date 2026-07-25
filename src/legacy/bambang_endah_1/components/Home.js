@@ -1,6 +1,6 @@
 import React, {useRef, forwardRef, useState, useEffect} from 'react';
 import {Box, useTheme} from '@mui/material';
-import bg from '../assets/image/bghome.jpg';
+import bg from '../assets/image/bghome.webp';
 import aos from 'aos';
 import 'aos/dist/aos.css';
 

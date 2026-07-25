@@ -11,7 +11,7 @@ import {
 } from '@mui/material';
 import {MailOutlined} from '@mui/icons-material';
 
-import bg from '../assets/image/home.jpg';
+import bg from '../assets/image/home.webp';
 import ornament from '../assets/image/modal.png';
 
 const Transition = forwardRef(function Transition(props, ref) {

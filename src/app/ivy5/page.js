@@ -1,4 +1,4 @@
-import coupleImage from '@/legacy/ivy5/assets/image/home.png';
+import coupleImage from '@/legacy/ivy5/assets/image/home.webp';
 
 import ClientPage from './client';
 

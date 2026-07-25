@@ -56,11 +56,11 @@ const ImageCarouselWrapper = styled(Box)`
 `;
 
 const imageToShow = [
-  '/media/elma_hendra/1.jpg',
-  '/media/elma_hendra/2.jpg',
-  '/media/elma_hendra/3.jpg',
-  '/media/elma_hendra/4.jpg',
-  '/media/elma_hendra/5.jpg',
+  '/media/elma_hendra/1.webp',
+  '/media/elma_hendra/2.webp',
+  '/media/elma_hendra/3.webp',
+  '/media/elma_hendra/4.webp',
+  '/media/elma_hendra/5.webp',
 ];
 
 const Gallery = forwardRef((props, sectionRef) => {
