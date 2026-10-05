@@ -101,20 +101,6 @@ const Closing = () => {
           <span style={{fontWeight: 'bold'}}>
             Wassalamu'alaikum Warahmatullahi Wabarakatuh
           </span>
-          {data.turutMengundang &&
-            data.turutMengundang.length > 0 && (
-              <>
-                <br />
-                <br />
-                Turut Mengundang:
-                {data.turutMengundang.map((name) => (
-                  <React.Fragment key={name}>
-                    <br />
-                    {name}
-                  </React.Fragment>
-                ))}
-              </>
-            )}
           <br />
           <br />
           <span style={{fontWeight: 'bold'}}>

@@ -35,6 +35,7 @@ const splitTime = (time = '') => {
 const Acara = forwardRef((props, sectionRef) => {
   const data = useCoupleData();
   const {akad, resepsi, mapsLink, location, hijriDate} = data.event;
+  const {turutMengundang} = data;
   // Same date and place: show one combined block instead of two cards.
   const isCombined =
     akad.date === resepsi.date && akad.address === resepsi.address;
@@ -315,6 +316,22 @@ const Acara = forwardRef((props, sectionRef) => {
           <PlaceIcon style={{marginRight: '7px', fontSize: '1rem'}} />
           Lihat Lokasi
         </Button>
+        {turutMengundang && turutMengundang.length > 0 && (
+          <Box
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            sx={{marginTop: 4}}
+          >
+            <Typography variant="h6">
+              <b>Turut Mengundang</b>
+            </Typography>
+            {turutMengundang.map((name) => (
+              <Typography key={name} variant="body1">
+                {name}
+              </Typography>
+            ))}
+          </Box>
+        )}
         <br />
         {location && (
           <Box data-aos="fade-up" data-aos-duration="1500">
