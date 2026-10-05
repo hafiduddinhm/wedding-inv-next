@@ -12,9 +12,33 @@ import {useCoupleData} from '@/context/CoupleDataContext';
 import backgroundImage from '../assets/image/bgAcara.png';
 import ornament1 from '../assets/image/acara1.png';
 
+// "Rabu, 28 Oktober 2026" -> {weekday, day, month, year}
+const parseDate = (text = '') => {
+  const [weekday = '', rest = ''] = text.split(', ');
+  const [day = '', month = '', year = ''] = rest.split(' ');
+  return {
+    weekday,
+    day: String(parseInt(day, 10) || day),
+    month,
+    year,
+  };
+};
+
+// "10.00 WIB s/d selesai" -> ["10.00 WIB", "s/d selesai"]
+const splitTime = (time = '') => {
+  const index = time.indexOf('s/d ');
+  return index > 0
+    ? [time.slice(0, index).trim(), time.slice(index)]
+    : [time, ''];
+};
+
 const Acara = forwardRef((props, sectionRef) => {
   const data = useCoupleData();
-  const {akad, resepsi, mapsLink, location} = data.event;
+  const {akad, resepsi, mapsLink, location, hijriDate} = data.event;
+  // Same date and place: show one combined block instead of two cards.
+  const isCombined =
+    akad.date === resepsi.date && akad.address === resepsi.address;
+  const {weekday, day, month, year} = parseDate(akad.date);
   const zoom = 17;
   const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
@@ -103,61 +127,183 @@ const Acara = forwardRef((props, sectionRef) => {
           menuju ikatan tali pernikahan yang insya Allah akan
           dilaksanakan pada:
         </p>
-        <Grid
-          container
-          style={{
-            position: 'relative',
-            marginTop: '7vh',
-            justifyContent: 'center',
-          }}
-        >
-          <Grid
-            item
-            data-aos="fade-right"
+        {isCombined ? (
+          <Box
+            data-aos="fade-up"
             data-aos-duration="1500"
-            xs={12}
-            sm={6}
-            style={{justifyContent: 'center', padding: 0}}
+            style={{
+              ...styles.glass,
+              maxWidth: '480px',
+              width: '100%',
+              justifySelf: 'center',
+              marginTop: '7vh',
+              boxSizing: 'border-box',
+            }}
           >
-            <Box style={styles.glass}>
-              <Typography variant="h3" className="font-estetik">
-                Akad Nikah
+            <Typography
+              variant="h6"
+              sx={{
+                letterSpacing: '0.3em',
+                textTransform: 'uppercase',
+              }}
+            >
+              {weekday}
+            </Typography>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: 2,
+                marginY: 1,
+              }}
+            >
+              <Typography
+                sx={{
+                  fontSize: '5.5rem',
+                  fontWeight: 700,
+                  lineHeight: 1,
+                }}
+              >
+                {day}
               </Typography>
-              <Typography variant="h6">
-                <b>{akad.date}</b>
-                <br />
-                Pukul <br />
-                <b>{akad.time}</b>
-                <br />
-                Alamat: <br />
-                {akad.address}
-              </Typography>
+              <Box sx={{textAlign: 'left'}}>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    lineHeight: 1.2,
+                  }}
+                >
+                  {month}
+                </Typography>
+                <Typography variant="h5" sx={{lineHeight: 1.2}}>
+                  {year}
+                </Typography>
+              </Box>
             </Box>
-          </Grid>
+            {hijriDate && (
+              <Typography variant="subtitle1">{hijriDate}</Typography>
+            )}
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                marginTop: 2,
+              }}
+            >
+              {[
+                {label: 'Akad Nikah', time: akad.time},
+                {label: 'Resepsi', time: resepsi.time},
+              ].map((item, index) => (
+                <Box
+                  key={item.label}
+                  sx={{
+                    flex: 1,
+                    paddingX: 1,
+                    borderLeft: index
+                      ? '1px solid currentColor'
+                      : 'none',
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: 400,
+                      fontSize: '0.95rem',
+                      letterSpacing: '0.05em',
+                      textTransform: 'uppercase',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {item.label}
+                  </Typography>
+                  <Typography variant="h6" sx={{fontWeight: 700}}>
+                    {splitTime(item.time)[0]}
+                    <br />
+                    {splitTime(item.time)[1] || ' '}
+                  </Typography>
+                </Box>
+              ))}
+            </Box>
+            <Typography variant="h6" sx={{marginTop: 2}}>
+              {akad.address}
+            </Typography>
+          </Box>
+        ) : (
           <Grid
-            item
-            data-aos="fade-left"
-            data-aos-duration="1500"
-            xs={12}
-            sm={6}
-            style={{justifyContent: 'center', padding: 0}}
+            container
+            style={{
+              position: 'relative',
+              marginTop: '7vh',
+              justifyContent: 'center',
+            }}
           >
-            <Box style={styles.glass}>
-              <Typography variant="h3" className="font-estetik">
-                Resepsi
-              </Typography>
-              <Typography variant="h6">
-                <b>{resepsi.date}</b>
-                <br />
-                Pukul <br />
-                <b>{resepsi.time}</b>
-                <br />
-                Alamat: <br />
-                {resepsi.address}
-              </Typography>
-            </Box>
+            <Grid
+              item
+              data-aos="fade-right"
+              data-aos-duration="1500"
+              xs={12}
+              sm={6}
+              style={{justifyContent: 'center', padding: 0}}
+            >
+              <Box style={styles.glass}>
+                <Typography variant="h3" className="font-estetik">
+                  Akad Nikah
+                </Typography>
+                <Typography variant="h6">
+                  <b>
+                    {akad.date}
+                    {hijriDate && (
+                      <>
+                        <br />
+                        {hijriDate}
+                      </>
+                    )}
+                  </b>
+                  <br />
+                  Pukul <br />
+                  <b>{akad.time}</b>
+                  <br />
+                  Alamat: <br />
+                  {akad.address}
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid
+              item
+              data-aos="fade-left"
+              data-aos-duration="1500"
+              xs={12}
+              sm={6}
+              style={{justifyContent: 'center', padding: 0}}
+            >
+              <Box style={styles.glass}>
+                <Typography variant="h3" className="font-estetik">
+                  Resepsi
+                </Typography>
+                <Typography variant="h6">
+                  <b>
+                    {resepsi.date}
+                    {hijriDate && (
+                      <>
+                        <br />
+                        {hijriDate}
+                      </>
+                    )}
+                  </b>
+                  <br />
+                  Pukul <br />
+                  <b>{resepsi.time}</b>
+                  <br />
+                  Alamat: <br />
+                  {resepsi.address}
+                </Typography>
+              </Box>
+            </Grid>
           </Grid>
-        </Grid>
+        )}
         <br />
         <Button
           data-aos="fade-up"
@@ -170,48 +316,50 @@ const Acara = forwardRef((props, sectionRef) => {
           Lihat Lokasi
         </Button>
         <br />
-        <Box data-aos="fade-up" data-aos-duration="1500">
-          <Typography variant="p">
-            Ketuk untuk melihat lokasi pernikahan
-          </Typography>
-          <LoadScript googleMapsApiKey={API_KEY}>
-            <GoogleMap
-              mapContainerStyle={{
-                width: '100%',
-                height: '50vh',
-                boxShadow: '0 5px 20px rgba(0, 0, 0, 0.2)',
-                borderRadius: 20,
-              }}
-              center={location}
-              zoom={zoom}
-              gestureHandling="cooperative"
-              options={{
-                zoomControlOptions: {position: 9, style: 3},
-                mapTypeControl: false,
-                streetViewControl: false,
-              }}
-            >
-              <MarkerF
-                position={location}
-                onClick={handleButtonClick}
-              />
-              <InfoWindow
-                position={location}
-                options={{disableAutoPan: true, closeBoxURL: ''}}
+        {location && (
+          <Box data-aos="fade-up" data-aos-duration="1500">
+            <Typography variant="p">
+              Ketuk untuk melihat lokasi pernikahan
+            </Typography>
+            <LoadScript googleMapsApiKey={API_KEY}>
+              <GoogleMap
+                mapContainerStyle={{
+                  width: '100%',
+                  height: '50vh',
+                  boxShadow: '0 5px 20px rgba(0, 0, 0, 0.2)',
+                  borderRadius: 20,
+                }}
+                center={location}
+                zoom={zoom}
+                gestureHandling="cooperative"
+                options={{
+                  zoomControlOptions: {position: 9, style: 3},
+                  mapTypeControl: false,
+                  streetViewControl: false,
+                }}
               >
-                <div style={{display: 'flex'}}>
-                  <PlaceIcon style={{marginRight: '8px'}} />
-                  <Typography
-                    onClick={handleButtonClick}
-                    variant="body1"
-                  >
-                    Lokasi Resepsi
-                  </Typography>
-                </div>
-              </InfoWindow>
-            </GoogleMap>
-          </LoadScript>
-        </Box>
+                <MarkerF
+                  position={location}
+                  onClick={handleButtonClick}
+                />
+                <InfoWindow
+                  position={location}
+                  options={{disableAutoPan: true, closeBoxURL: ''}}
+                >
+                  <div style={{display: 'flex'}}>
+                    <PlaceIcon style={{marginRight: '8px'}} />
+                    <Typography
+                      onClick={handleButtonClick}
+                      variant="body1"
+                    >
+                      Lokasi Resepsi
+                    </Typography>
+                  </div>
+                </InfoWindow>
+              </GoogleMap>
+            </LoadScript>
+          </Box>
+        )}
         <br />
       </Box>
     </section>

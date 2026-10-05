@@ -6,8 +6,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import {useCoupleData} from '@/context/CoupleDataContext';
 import backgroundImage from '../assets/image/bgGaleri.png';
 
-// Ordering-contact info for this invitation product itself (not the
-// couple's own contact) — identical across every couple on this theme.
+// Contact info for this invitation product (not the couple) — same for every couple on this theme.
 const ORDER_WA_LINK = 'http://wa.link/nd0byg';
 const ORDER_IG_LINK = 'https://www.instagram.com/menghitunghari_inv';
 
@@ -75,6 +74,7 @@ const Closing = () => {
         <Typography
           variant="body1"
           data-aos="flip-left"
+          data-aos-duration="1500"
           data-aos-delay="700"
           style={{
             fontWeight: '700',
@@ -101,6 +101,20 @@ const Closing = () => {
           <span style={{fontWeight: 'bold'}}>
             Wassalamu'alaikum Warahmatullahi Wabarakatuh
           </span>
+          {data.turutMengundang &&
+            data.turutMengundang.length > 0 && (
+              <>
+                <br />
+                <br />
+                Turut Mengundang:
+                {data.turutMengundang.map((name) => (
+                  <React.Fragment key={name}>
+                    <br />
+                    {name}
+                  </React.Fragment>
+                ))}
+              </>
+            )}
           <br />
           <br />
           <span style={{fontWeight: 'bold'}}>

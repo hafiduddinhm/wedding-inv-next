@@ -48,7 +48,7 @@ const Pengantin = forwardRef((props, sectionRef) => {
     },
   };
 
-  const Person = ({person, animation}) => (
+  const Person = ({person, animation, top = '10%'}) => (
     <Box
       data-aos={animation}
       data-aos-duration="1500"
@@ -56,13 +56,17 @@ const Pengantin = forwardRef((props, sectionRef) => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        marginTop: '10%',
+        marginTop: top,
       }}
     >
       <Typography
         variant="h3"
         className="font-estetik"
-        style={{marginTop: '2vh'}}
+        style={{
+          marginTop: '2vh',
+          fontSize: 'clamp(3rem, 14vw, 4.5rem)',
+          lineHeight: 1.1,
+        }}
       >
         {person.name}
       </Typography>
@@ -118,11 +122,11 @@ const Pengantin = forwardRef((props, sectionRef) => {
           data-aos="flip-left"
           data-aos-duration="1500"
           className="font-estetik"
-          style={{marginTop: '2vh'}}
+          style={{margin: 0, lineHeight: 1}}
         >
           &
         </Typography>
-        <Person person={data.groom} animation="fade-left" />
+        <Person person={data.groom} animation="fade-left" top="0" />
       </Box>
     </section>
   );

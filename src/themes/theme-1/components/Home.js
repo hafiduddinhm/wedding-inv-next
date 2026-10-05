@@ -38,6 +38,22 @@ const Home = forwardRef((props, ref) => {
 
   useEffect(() => {
     aos.init();
+
+    // AOS caches element offsets at init. Late font/image loads shift the
+    // layout, so re-measure whenever the page height changes.
+    let timer;
+    const refresh = () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => aos.refresh(), 100);
+    };
+    const observer = new ResizeObserver(refresh);
+    observer.observe(document.body);
+    document.fonts?.ready.then(refresh);
+
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+    };
   }, []);
 
   useEffect(() => {
@@ -119,7 +135,10 @@ const Home = forwardRef((props, ref) => {
     txt_estetik: {
       color: theme.palette.primary.main,
       fontFamily: 'lovely-thing',
-      lineHeight: '70px',
+      fontSize: 'clamp(4.5rem, 24vw, 7rem)',
+      lineHeight: 0.75,
+      whiteSpace: 'pre-line',
+      WebkitTextStroke: '1.5px currentColor',
     },
   };
 
@@ -216,7 +235,7 @@ const Home = forwardRef((props, ref) => {
             style={styles.txt_estetik}
             className="font-estetik"
           >
-            {data.shortNames}
+            {data.shortNames.replace(' & ', ' &\n')}
           </Typography>
           <br />
           <Typography variant="p">

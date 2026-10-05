@@ -49,6 +49,8 @@ const OpeningModal = ({onClosed = () => {}}) => {
       color: theme.palette.primary.main,
       fontFamily: 'lovely-thing',
       lineHeight: '70px',
+      whiteSpace: 'pre-line',
+      WebkitTextStroke: '1.5px currentColor',
     },
     txt_p: {
       fontFamily: 'EB Garamond',
@@ -98,7 +100,7 @@ const OpeningModal = ({onClosed = () => {}}) => {
           style={styles.txt_estetik}
           className="font-estetik"
         >
-          {data.shortNames}
+          {data.shortNames.replace(' & ', ' &\n')}
         </Typography>
         <Typography variant="h6">
           {data.description.split(', ')[1] || data.description}

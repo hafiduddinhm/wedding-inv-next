@@ -26,6 +26,7 @@ import {
   Slide,
 } from '@mui/material';
 
+import TulipIcon from './TulipIcon';
 import backgroundImage from '../assets/image/bgUcapan.png';
 import ornament1 from '../assets/image/divider1.png';
 import ornament2 from '../assets/image/divider2.png';
@@ -400,7 +401,7 @@ const Ucapan = forwardRef((props, sectionRef) => {
               </Grid>
             ) : (
               <>
-                {comments !== null && comments !== undefined ? (
+                {comments && comments.length > 0 ? (
                   <>
                     {comments.map((comment) => (
                       <Grid key={comment._id} item>
@@ -459,14 +460,30 @@ const Ucapan = forwardRef((props, sectionRef) => {
                   <Grid
                     item
                     sx={{
-                      margin: '2%',
+                      margin: '5% 2%',
                       display: 'flex',
+                      flexDirection: 'column',
                       justifyContent: 'center',
                       alignItems: 'center',
+                      gap: 1,
                     }}
                   >
-                    <p style={styles.txt}>
-                      <i>Belum ada ucapan</i>
+                    <TulipIcon
+                      size={80}
+                      style={{
+                        color: theme.palette.primary.main,
+                        opacity: 0.25,
+                      }}
+                    />
+                    <p
+                      style={{
+                        ...styles.card.txt,
+                        margin: 0,
+                        textAlign: 'center',
+                        opacity: 0.6,
+                      }}
+                    >
+                      <i>Yuk jadi yang pertama memberikan ucapan!</i>
                     </p>
                   </Grid>
                 )}

@@ -6,23 +6,23 @@ body {
 
 @font-face {
   font-family: 'moontime';
-  src: url('/src/font/moontime.ttf');
+  src: url('/fonts/moontime.ttf');
 }
 @font-face {
   font-family: 'malibu';
-  src: url('/src/font/Malibu.otf');
+  src: url('/fonts/Malibu.otf');
 }
 @font-face {
   font-family: 'lovely-thing';
-  src: url('/src/font/Lovely\ Thing.otf');
+  src: url('/fonts/Lovely%20Thing.otf');
 }
 @font-face {
   font-family: 'amoresa-aged';
-  src: url('/src/font/Amoresa\ Aged.otf');
+  src: url('/fonts/Amoresa%20Aged.otf');
 }
 @font-face {
   font-family: 'amoresa-regular';
-  src: url('/src/font/Amoresa\ Regular.otf');
+  src: url('/fonts/Amoresa%20Regular.otf');
 }
 
 code {

@@ -114,9 +114,9 @@ const Theme = ({data}) => {
 
   const hasGallery = Boolean(data.gallery && data.gallery.length);
   const hasStory = Boolean(data.story && data.story.length);
+  const hasAccounts = Boolean(data.accounts && data.accounts.length);
 
-  // Section order matches the original pages: Home, Pengantin, Acara,
-  // [Gallery], [PerjalananCerita], AmplopDigital, Ucapan, Closing.
+  // Section order matches the original pages.
   const navSections = [
     {key: 'home', ref: section1Ref},
     {key: 'pengantin', ref: section2Ref},
@@ -135,7 +135,7 @@ const Theme = ({data}) => {
           <Acara ref={section3Ref} />
           {hasGallery && <Gallery ref={section4Ref} />}
           {hasStory && <PerjalananCerita />}
-          <AmplopDigital />
+          {hasAccounts && <AmplopDigital />}
           <Ucapan ref={section5Ref} />
           <Closing />
           <BottomNavbar
