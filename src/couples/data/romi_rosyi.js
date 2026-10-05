@@ -6,9 +6,7 @@ const data = {
   description: 'Sabtu, 21 Oktober 2023',
   ogImage: '/couples/romi_rosyi/home.webp',
   heroImage: '/couples/romi_rosyi/home.webp',
-  // This couple's original page frames/masks the hero photo instead of
-  // showing it plain (theme-owned FRAME.png/MASK.svg assets) — Home.js
-  // switches rendering style based on this flag.
+  // Only this couple frames/masks the hero photo instead of showing it plain.
   heroFramed: true,
 
   bride: {

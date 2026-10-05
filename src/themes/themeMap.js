@@ -5,4 +5,7 @@ export const themeMap = {
   'theme-1': dynamic(() => import('./theme-1/components/Theme'), {
     ssr: false,
   }),
+  'theme-2': dynamic(() => import('./theme-2/components/Theme'), {
+    ssr: false,
+  }),
 };

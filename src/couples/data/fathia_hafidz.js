@@ -23,8 +23,7 @@ const data = {
 
   event: {
     countdownTarget: '2024-12-12T14:00:00',
-    // Original page has the "Save the Date" calendar button disabled
-    // (commented out in source) — keep that behavior: null hides the button.
+    // null hides the "Save the Date" button, matching the original page.
     calendarStart: null,
     calendarEnd: null,
     akad: {

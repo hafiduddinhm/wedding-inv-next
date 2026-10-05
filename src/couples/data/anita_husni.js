@@ -5,13 +5,10 @@ const data = {
   shortNames: 'Anita & Husni',
   description: 'Minggu, 5 November 2023',
   ogImage: '/couples/anita_husni/home.png',
-  // Original page shows a decorative illustration (not the couple's own
-  // photo) in the Home hero slot — og:image still uses the real photo above.
+  // Hero slot shows a decorative illustration, not the couple's own photo.
   heroImage: '/couples/anita_husni/illustration.png',
 
-  // Standardized order across all Theme 1 couples: bride is always shown
-  // first, then groom (per user direction — some original pages displayed
-  // groom first; this normalizes display order across the theme).
+  // Bride is always shown first across all Theme 1 couples (standardized order).
   bride: {
     name: 'Anita Nurrispa',
     nickname: 'Ade Nita',

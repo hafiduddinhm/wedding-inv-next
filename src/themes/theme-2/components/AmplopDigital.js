@@ -8,22 +8,16 @@ import {
   AlertTitle,
   Snackbar,
   Slide,
-  Typography,
 } from '@mui/material';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 import {useCoupleData} from '@/context/CoupleDataContext';
 import backgroundImage from '../assets/image/bgAmplop.png';
-import ornament1 from '../assets/image/divider1.png';
-import ornament2 from '../assets/image/divider2.png';
+import ornament from '../assets/image/ornamen2.png';
 
 const AmplopDigital = () => {
   const data = useCoupleData();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [windowHeight, setWindowHeight] = useState(
-    window.innerHeight,
-  );
-
   const [open, setOpen] = useState(false);
   const [severity, setSeverity] = useState('success');
   const [title, setTitle] = useState('');
@@ -35,10 +29,7 @@ const AmplopDigital = () => {
   };
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-      setWindowHeight(window.innerHeight);
-    };
+    const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -74,25 +65,15 @@ const AmplopDigital = () => {
       display: 'grid',
       flexDirection: 'column',
       alignItems: 'center',
-      color: 'primary.main',
-      padding: '10% 5%',
+      color: 'dark.main',
+      marginTop: '-35vh',
+      padding:
+        windowWidth > 600 ? '5% 17% 10% 17%' : '10% 17% 10% 17%',
       backgroundImage: `url(${backgroundImage})`,
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'top',
       backgroundSize: '100% 100%',
       overflow: 'hidden',
-      textAlign: 'center',
-    },
-    glass: {
-      background: 'rgba(255, 254, 251, 0.2)',
-      borderRadius: '16px',
-      boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
-      backdropFilter: 'blur(4px)',
-      WebkitBackdropFilter: 'blur(5px)',
-      border: '1px solid rgba(255, 254, 251, 0.3)',
-      padding: '20px',
-      margin: '10px',
-      textAlign: 'center',
     },
     btnStyles: {
       borderRadius: 30,
@@ -103,61 +84,66 @@ const AmplopDigital = () => {
       width: '100%',
       backgroundColor: theme.palette.primary.main,
     },
+    txt: {
+      header: {
+        fontSize: `${300 + windowWidth * 0.06}%`,
+        marginBottom: '2vh',
+        textAlign: 'center',
+      },
+      h5: {
+        textAlign: 'center',
+        fontSize: `${90 + windowWidth * 0.04}%`,
+        fontWeight: 'bold',
+        color: theme.palette.dark.main,
+      },
+      larger: {
+        textAlign: 'center',
+        fontSize: `${110 + windowWidth * 0.04}%`,
+        color: theme.palette.dark.main,
+        fontWeight: 300,
+      },
+      textAlign: 'center',
+      fontSize: `${70 + windowWidth * 0.04}%`,
+      color: theme.palette.dark.main,
+      marginBottom: '2vh',
+      fontWeight: 300,
+    },
     img: {
-      width: '40%',
+      width: '100%',
       marginBottom: '1vh',
     },
   };
 
+  const accounts = data.accounts || [];
+
   return (
     <>
-      <img
-        data-aos="zoom-in"
-        data-aos-duration="1500"
-        src={ornament1}
-        alt="flower1"
-        style={{
-          position: 'absolute',
-          alignSelf: 'left',
-          marginTop: '-22vh',
-          width: `${windowHeight > windowWidth ? '35%' : '20vh'}`,
-          left: 0,
-        }}
-      />
-      <img
-        data-aos="zoom-in"
-        data-aos-duration="1500"
-        src={ornament2}
-        alt="flower2"
-        style={{
-          position: 'absolute',
-          alignSelf: 'right',
-          marginTop: '-22vh',
-          width: `${windowHeight > windowWidth ? '35%' : '20vh'}`,
-          right: 0,
-        }}
-      />
       <Box sx={styles.box}>
-        <Typography variant="h4" className="font-estetik">
+        <h1 className="font-estetik" style={styles.txt.header}>
           Amplop Digital
-        </Typography>
-        <Typography variant="p">
-          Doa restu anda merupakan karunia yang sangat berarti bagi
+        </h1>
+        <p style={styles.txt}>
+          Doa Restu Anda merupakan karunia yang sangat berarti bagi
           kami.
           <br />
-          Dan jika memberi adalah ungkapan tanda kasih anda, anda
+          Dan jika memberi adalah ungkapan tanda kasih Anda, Anda
           dapat memberi kado secara cashlesh melalui:
-        </Typography>
-        <Box>
+        </p>
+        <Box
+          style={{
+            backgroundColor: theme.palette.light.main,
+            width: '100%',
+          }}
+        >
           <br />
           <Grid container spacing={4} justifyContent="center">
-            {data.accounts.map((account, index) => {
+            {accounts.map((account, index) => {
               const isLastOdd =
-                data.accounts.length % 2 !== 0 &&
-                index === data.accounts.length - 1;
+                accounts.length % 2 !== 0 &&
+                index === accounts.length - 1;
               return (
                 <Grid
-                  key={index}
+                  key={account.number}
                   data-aos={
                     isLastOdd
                       ? 'fade-up'
@@ -171,23 +157,20 @@ const AmplopDigital = () => {
                   sm={6}
                   style={{justifyContent: 'center'}}
                 >
-                  <Box style={styles.glass}>
-                    {account.bankLogoPath ? (
-                      <img
-                        src={account.bankLogoPath}
-                        style={styles.img}
-                        alt={account.bankName}
-                      />
-                    ) : (
-                      <Typography variant="h6">
-                        {account.bankName || 'Rekening'}
-                      </Typography>
-                    )}
-                    <Typography variant="h6">
+                  <Box
+                    style={{
+                      backgroundColor: '#f7fafc',
+                      borderRadius: '7%',
+                      padding: '5% 10% 10% 10%',
+                    }}
+                  >
+                    <img src={ornament} style={styles.img} alt="" />
+                    <h5 style={styles.txt.h5}>{account.bankName}</h5>
+                    <p style={styles.txt.larger}>
                       {account.number}
                       <br />
                       a.n. {account.holder}
-                    </Typography>
+                    </p>
                     <Button
                       variant="contained"
                       onClick={() =>
@@ -204,23 +187,23 @@ const AmplopDigital = () => {
                 </Grid>
               );
             })}
-          </Grid>
-          <Snackbar
-            open={open}
-            autoHideDuration={3000}
-            onClose={handleSnackbarClose}
-            TransitionComponent={Slide}
-            anchorOrigin={{vertical: 'top', horizontal: 'center'}}
-          >
-            <Alert
-              severity={severity}
-              variant="filled"
+            <Snackbar
+              open={open}
+              autoHideDuration={3000}
               onClose={handleSnackbarClose}
+              TransitionComponent={Slide}
+              anchorOrigin={{vertical: 'top', horizontal: 'center'}}
             >
-              <AlertTitle>{title}</AlertTitle>
-              {message}
-            </Alert>
-          </Snackbar>
+              <Alert
+                severity={severity}
+                variant="filled"
+                onClose={handleSnackbarClose}
+              >
+                <AlertTitle>{title}</AlertTitle>
+                {message}
+              </Alert>
+            </Snackbar>
+          </Grid>
         </Box>
         <br />
         <br />
